@@ -1,9 +1,9 @@
-# common/settings.py
-from pydantic import BaseSettings
+from typing import Optional
+from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    database_url: str
-    secret_key: str
+    database_url: Optional[str] = None
+    secret_key: Optional[str] = None
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 30
 

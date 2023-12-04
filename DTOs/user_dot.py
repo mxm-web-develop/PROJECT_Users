@@ -13,6 +13,6 @@ class UserResponse(BaseModel):
     email: str
     is_active: bool
     created_at: Optional[datetime]
-
+    avator:str
     class Config:
         orm_mode = True
